@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Update Page</title>
+</head>
+<body>
+<!--Sets header to update pasword -->
+<h1>Update Password</h1>
+
+<!--Sets form action to send back to login page
+after password is updated -->
+<form action="/login" method="POST">
+    {{ form.hidden_tag() }}
+    <!-- Sets the value to the current users password
+     which should have been updated-->
+    {{ form.password(value=current_user.password) }}
+    {{ form.submit }}
+</form>
+
+
+</body>
+</html>
